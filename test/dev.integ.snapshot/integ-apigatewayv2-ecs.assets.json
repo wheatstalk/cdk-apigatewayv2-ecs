@@ -1,0 +1,19 @@
+{
+  "version": "15.0.0",
+  "files": {
+    "4686f4eb9ade548cf23891b6cc4d6ce4bdb6bfdd5b41f7ee763e2e52ef328406": {
+      "source": {
+        "path": "integ-apigatewayv2-ecs.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "4686f4eb9ade548cf23891b6cc4d6ce4bdb6bfdd5b41f7ee763e2e52ef328406.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
