@@ -1,4 +1,6 @@
 const { awscdk } = require('projen');
+const { NpmAccess } = require('projen/lib/javascript');
+const { ReleaseTrigger } = require('projen/lib/release');
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Josh Kellendonk',
   authorAddress: 'joshkellendonk@gmail.com',
@@ -6,6 +8,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   defaultReleaseBranch: 'main',
   name: '@wheatstalk/cdk-apigatewayv2-ecs',
   repositoryUrl: 'https://github.com/joshkellendonk/cdk-foo.git',
+
+  npmAccess: NpmAccess.PUBLIC,
 
   peerDeps: [
     '@aws-cdk/aws-apigatewayv2-alpha@^2.1.0-alpha.0',
