@@ -1,5 +1,6 @@
 {
   "name": "@wheatstalk/cdk-apigatewayv2-ecs",
+  "description": "Integrates HTTP API Gateway to ECS by VPC Link",
   "repository": {
     "type": "git",
     "url": "https://github.com/joshkellendonk/cdk-foo.git"

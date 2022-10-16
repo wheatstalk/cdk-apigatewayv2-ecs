@@ -8,6 +8,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   defaultReleaseBranch: 'main',
   name: '@wheatstalk/cdk-apigatewayv2-ecs',
   repositoryUrl: 'https://github.com/joshkellendonk/cdk-foo.git',
+  description: 'Integrates HTTP API Gateway to ECS by VPC Link',
 
   npmAccess: NpmAccess.PUBLIC,
 
