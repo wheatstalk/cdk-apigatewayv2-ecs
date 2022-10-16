@@ -1,13 +1,12 @@
 const { awscdk } = require('projen');
 const { NpmAccess } = require('projen/lib/javascript');
-const { ReleaseTrigger } = require('projen/lib/release');
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Josh Kellendonk',
   authorAddress: 'joshkellendonk@gmail.com',
   cdkVersion: '2.1.0',
   defaultReleaseBranch: 'main',
   name: '@wheatstalk/cdk-apigatewayv2-ecs',
-  repositoryUrl: 'https://github.com/joshkellendonk/cdk-foo.git',
+  repositoryUrl: 'https://github.com/wheatstalk/cdk-apigatewayv2-ecs.git',
   description: 'Integrates HTTP API Gateway to ECS by VPC Link',
 
   npmAccess: NpmAccess.PUBLIC,
