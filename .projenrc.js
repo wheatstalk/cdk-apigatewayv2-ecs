@@ -1,5 +1,5 @@
 const { awscdk } = require('projen');
-const { NpmAccess } = require('projen/lib/javascript');
+const { NpmAccess, UpgradeDependenciesSchedule } = require('projen/lib/javascript');
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Josh Kellendonk',
   authorAddress: 'joshkellendonk@gmail.com',
@@ -10,6 +10,13 @@ const project = new awscdk.AwsCdkConstructLibrary({
   description: 'Integrates HTTP API Gateway to ECS by VPC Link',
 
   npmAccess: NpmAccess.PUBLIC,
+  depsUpgradeOptions: {
+    workflowOptions: {
+      schedule: UpgradeDependenciesSchedule.MONTHLY,
+    },
+  },
+
+  gitpod: true,
 
   peerDeps: [
     '@aws-cdk/aws-apigatewayv2-alpha@^2.1.0-alpha.0',
